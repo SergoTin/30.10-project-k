@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#073d32">
+    <meta name="description" content="Просветление — книги, лекции и пространство для ваших идей.">
+    <title>Просветление — место, где становится светлее</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <div class="shapka konteyner setka">
+      <div class="nazvanie-sayta perehod" role="link" tabindex="0" onclick="document.getElementById('pervyy-ekran').scrollIntoView({behavior:'smooth',block:'start'})" onkeydown="if(event.key==='Enter')this.click()">Просветление</div>
+      <div class="navigatsiya" aria-label="Главная навигация">
+        <span class="perehod" role="link" tabindex="0" onclick="document.getElementById('blizhayshie-lektsii').scrollIntoView({behavior:'smooth',block:'start'})" onkeydown="if(event.key==='Enter')this.click()">Лекции</span>
+        <span class="perehod" role="link" tabindex="0" onclick="document.getElementById('zaly').scrollIntoView({behavior:'smooth',block:'start'})" onkeydown="if(event.key==='Enter')this.click()">Залы</span>
+        <span class="perehod" role="link" tabindex="0" onclick="document.getElementById('o-biblioteke').scrollIntoView({behavior:'smooth',block:'start'})" onkeydown="if(event.key==='Enter')this.click()">О библиотеке</span>
+      </div>
+    </div>
+
+    <div id="pervyy-ekran" class="pervyy-ekran konteyner setka">
+      <div class="tekst-pervogo-ekrana">
+        <h1><span>Место, где</span><span>становится</span><span>светлее</span></h1>
+        <p>Книги, лекции и пространство для ваших идей</p>
+        <div class="knopka perehod" role="link" tabindex="0" onclick="document.getElementById('blizhayshie-lektsii').scrollIntoView({behavior:'smooth',block:'start'})" onkeydown="if(event.key==='Enter')this.click()">Выбрать лекцию</div>
+      </div>
+      <div class="illyustratsiya chitatel" role="img" aria-label="Читатель с книгой сидит на двух больших книгах"></div>
+    </div>
+
+    <div id="blizhayshie-lektsii" class="kremovyy-fon">
+      <div class="konteyner razdel">
+        <h2>Ближайшие лекции</h2>
+        <p class="podzagolovok">Открывайте новые темы и находите единомышленников</p>
+        <div class="setka-lektsiy">
+          <div class="kartochka-lektsii">
+            <div class="illyustratsiya istoriya-iskusstv" role="img" aria-label="История искусств"></div>
+          </div>
+          <div class="kartochka-lektsii">
+            <div class="illyustratsiya domik" role="img" aria-label="История России"></div>
+          </div>
+          <div class="kartochka-lektsii">
+            <div class="illyustratsiya lampa" role="img" aria-label="Встреча с автором"></div>
+          </div>
+        </div>
+        <p class="podpis">Выберите тему, которая вам интересна, и приходите за новыми идеями.</p>
+      </div>
+    </div>
+
+    <div id="knigi" class="konteyner razdel setka knigi">
+      <div class="tekst-o-knigah">
+        <h2>Найдите свою книгу</h2>
+        <p class="podzagolovok">Для учёбы, работы и удовольствия</p>
+        <p class="opisanie">Хорошая книга начинается с любопытства. Искусство, история, наука или художественная литература — найдите то, что увлечёт именно вас.</p>
+        <div class="illyustratsiya otkrytaya-kniga" role="img" aria-label="Раскрытая книга с закладкой"></div>
+      </div>
+      <div class="illyustratsiya knizhnaya-polka" role="img" aria-label="Три полки с разноцветными книгами"></div>
+    </div>
+
+    <div id="zaly" class="korichnevyy-fon">
+      <div class="konteyner razdel">
+        <h2>Выберите зал</h2>
+        <p class="podzagolovok">Для совместной работы, встреч и спокойной учёбы</p>
+        <div class="knopki-zalov" aria-label="Выбор зала">
+          <div class="knopka-zala" role="button" tabindex="0" aria-pressed="true" data-capacity="12" data-facilities="Wi-Fi · Розетки · Экран" onclick="document.getElementById('vmestimost-zala').textContent='До '+this.dataset.capacity+' человек';document.getElementById('udobstva-zala').textContent=this.dataset.facilities;this.parentElement.querySelectorAll('.knopka-zala').forEach(tab=>tab.setAttribute('aria-pressed',String(tab===this)))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">Зал 1</div>
+          <div class="knopka-zala" role="button" tabindex="0" aria-pressed="false" data-capacity="10" data-facilities="Wi-Fi · Экран" onclick="document.getElementById('vmestimost-zala').textContent='До '+this.dataset.capacity+' человек';document.getElementById('udobstva-zala').textContent=this.dataset.facilities;this.parentElement.querySelectorAll('.knopka-zala').forEach(tab=>tab.setAttribute('aria-pressed',String(tab===this)))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">Зал 2</div>
+          <div class="knopka-zala" role="button" tabindex="0" aria-pressed="false" data-capacity="15" data-facilities="Wi-Fi · Розетки" onclick="document.getElementById('vmestimost-zala').textContent='До '+this.dataset.capacity+' человек';document.getElementById('udobstva-zala').textContent=this.dataset.facilities;this.parentElement.querySelectorAll('.knopka-zala').forEach(tab=>tab.setAttribute('aria-pressed',String(tab===this)))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">Зал 3</div>
+        </div>
+        <div class="kartochka-zala">
+          <span class="strelka-zala strelka-zala-1" aria-hidden="true"></span>
+          <span class="strelka-zala strelka-zala-2" aria-hidden="true"></span>
+          <span class="strelka-zala strelka-zala-3" aria-hidden="true"></span>
+          <div class="illyustratsiya stol-i-stulya" role="img" aria-label="Стол и два стула"></div>
+          <div class="svedeniya-o-zale" aria-live="polite" aria-atomic="true">
+            <h3 id="vmestimost-zala">До 12 человек</h3>
+            <p id="udobstva-zala">Wi-Fi · Розетки · Экран</p>
+            <p class="opisanie-zala">Для встреч, учёбы и совместной работы</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="o-biblioteke" class="kremovyy-fon">
+      <div class="konteyner razdel setka o-biblioteke">
+        <div class="tekst-o-biblioteke">
+          <h2>Здесь вам помогут</h2>
+          <p class="podzagolovok">Подскажем, что почитать, найдём нужную книгу и поможем освоиться</p>
+          <div class="illyustratsiya sotrudniki" role="img" aria-label="Сотрудники библиотеки рядом с книгами"></div>
+        </div>
+        <div class="uslugi" role="img" aria-label="Книги по интересам, место для учёбы, встречи и лекции">
+        </div>
+      </div>
+    </div>
+
+    <div id="prihodite-v-gosti" class="konteyner razdel setka prihodite-v-gosti">
+      <div class="tekst-kontaktov">
+        <h2>Приходите в гости</h2>
+        <div class="kontakt">
+          <div class="znachok-adresa" aria-hidden="true"><span></span></div>
+          <div><h3>Адрес библиотеки</h3><p>Улица Пушкина, дом Колдокушкина 9 3/4</p></div>
+        </div>
+        <div class="kontakt">
+          <div class="chasy" aria-hidden="true"><span></span></div>
+          <div><h3>Часы работы</h3><p>С 9:00 до 21:00 каждый день</p></div>
+        </div>
+        <div class="knopka perehod" role="link" tabindex="0" onclick="window.open('https://yandex.ru/maps/', '_blank', 'noopener,noreferrer')" onkeydown="if(event.key==='Enter')this.click()">Как добраться</div>
+      </div>
+      <div class="illyustratsiya dver" role="img" aria-label="Открытая дверь библиотеки"></div>
+    </div>
+
+    <div class="podval konteyner setka">
+      <div class="nazvanie-sayta perehod" role="link" tabindex="0" onclick="window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','#pervyy-ekran')" onkeydown="if(event.key==='Enter')this.click()">Просветление</div>
+      <div class="navigatsiya-podvala">
+        <span class="perehod" role="link" tabindex="0" onclick="document.getElementById('blizhayshie-lektsii').scrollIntoView({behavior:'smooth',block:'start'})" onkeydown="if(event.key==='Enter')this.click()">Лекции</span>
+        <span>·</span>
+        <span class="perehod" role="link" tabindex="0" onclick="location.hash='zaly'" onkeydown="if(event.key==='Enter')this.click()">Залы</span>
+        <span>·</span>
+        <span class="perehod" role="link" tabindex="0" onclick="location.hash='o-biblioteke'" onkeydown="if(event.key==='Enter')this.click()">Библиотека</span>
+      </div>
+    </div>
+  </body>
+</html>
